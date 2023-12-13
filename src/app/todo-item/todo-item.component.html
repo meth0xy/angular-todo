@@ -1,0 +1,17 @@
+<div class="todo" *ngIf="todo">
+
+<div *ngIf="!showEditInput else elseShowEditInput">  {{todo}}
+</div>
+<ng-template #elseShowEditInput>
+  <input [(ngModel)]="todo"/>
+</ng-template>
+<button type="button" (click)="deleteTodoItem()">Delete</button>
+<button type="button" (click)="toggleEdit()">
+<div *ngIf="!showEditInput else elseEditButtonText">
+  Edit
+</div>
+<ng-template #elseEditButtonText>
+  Close
+</ng-template>
+</button>
+</div>

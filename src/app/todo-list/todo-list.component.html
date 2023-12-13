@@ -1,0 +1,3 @@
+<app-todo-item *ngFor="let todo of todos; index as todoIndex" [todo]="todo" [index]="todoIndex"></app-todo-item>
+<input [(ngModel)]="newTodo" />
+<button (click)="addNewTodo()">Add Todo</button>
